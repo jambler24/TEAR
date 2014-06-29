@@ -10,24 +10,29 @@ from math import sqrt
 
 """
 TEAR allows the offline analysis of a sequence for repeat-induced point mutation using a profile based approach.
+
 The user provides:
-The sequences for use in the profile in fasta format (-p)
-The sequence to be tested in fasta format (-i)
-The file path for the output file (-o)
-The 
+-The sequences for use in the profile in fasta format
+-The sequence to be tested in fasta format 
+-The file path for the output file 
+
+These are placed in the section bellow
 """
 
-print 'Group Chi analysis and SD analysis combined'
+print 'TEAR offline analysis tool'
 
 # Needed variables
 
-#profilefilePath = sys.argv[1]
+# The profile path points to a fasta file containing multiple TE sequences to be used to generate a profile
 profilefilePath = "/Users/Admin/Dropbox/Programs/tools/TEAR/temp/profile.fa"
-#testInputSequence = sys.argv[2]
+
+# This is the sequence that is being compared to the profile
 testInputSequence = "GCGATCGCGCGGCATCAGCATTATATTTTAAACCCGGGTTTAGCGATCATTATATACGGGCGCTCGTGTGTACACAC"
-#outputPath = sys.argv[3]
+
+# This is a path where a temporary file is created for the profile
 outputPath = "/Users/Admin/Dropbox/Programs/tools/TEAR/temp/"
-#theThreshold = sys.argv[4]
+
+# This is the threshold SD at which the k-mer composition is considered abnormal
 theThreshold = "1"
 
 # setup any things needed later
